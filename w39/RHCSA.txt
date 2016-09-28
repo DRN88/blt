@@ -1,0 +1,110 @@
+http://ptgmedia.pearsoncmg.com/images/9780321767950/samplepages/0321767950.pdf
+http://codingbee.net/tutorials/rhcsa/rhcsa-about-this-course/
+
+VTC RHCSA (Red Hat Certified System Administrator ) Re-encoded fixed Avi:
+magnet:?xt=urn:btih:b5e501d2b681e404616d6e8853f2745e09b6d787&dn=VTC%20RHCSA%20%28Red%20Hat%20Certified%20Sys...&tr=http%3A%2F%2Ftracker.mg64.net%3A6881%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%2Fannounce&tr=http%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.kuaikuai.cn%3A8080%2Fannounce&tr=http%3A%2F%2Ftracker.glotorrents.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.istole.it%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=http%3A%2F%2Fwww.opentrackr.org%2Fannounce&tr=http%3A%2F%2Fwww.eddie4.nl%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker3.infohash.org%2Fannounce&tr=http%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=http%3A%2F%2Fleechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fmgtracker.org%3A2710%2Fannounce&tr=http%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=http%3A%2F%2Fglotorrents.com%3A6969%2Fannounce&tr=http%3A%2F%2Fbigfoot1942.sektori.org%3A6969%2Fannounce
+
+
+01 Welcome.AVI
+02 Practice Requirements.AVI
+03 Basic Installation.AVI
+04 Kickstart Files.AVI
+05 Installing RHEL with Kickstart.AVI
+06 Accessing a Terminal.AVI
+07 Basic Commands pt- 1.AVI
+08 Basic Commands pt- 2.AVI
+09 Help at the Command Line.AVI
+10 cat and nano.AVI
+11 vim.AVI
+12 File Compression.AVI
+13 Elevating Privileges.AVI
+14 Input and Output Redirection.AVI
+15 Regular Expressions.AVI
+16 Adding and Removing Users.AVI
+17 Password Control.AVI
+18 Group Administration.AVI
+19 Account Configuration Files.AVI
+20 User Accounts with LDAP.AVI
+21 Basic Permissions pt- 1.AVI
+22 Basic Permissions pt- 2.AVI
+23 Basic Permissions pt- 3.AVI
+24 Group Directories.AVI
+25 Network Devices.AVI
+26 NetworkManager.AVI
+27 system-config-network.AVI
+28 Network Commands.AVI
+29 Network Scripts.AVI
+30 system-config-firewall.AVI
+31 iptables pt- 1.AVI
+32 iptables pt- 2.AVI
+33 RPM Files.AVI
+34 Yum Command.AVI
+35 Yum Repository.AVI
+36 RPM Command.AVI
+37 PackageKit.AVI
+38 Updating the Kernel.AVI
+39 Creating Partitions.AVI
+40 Creating Filesystems.AVI
+41 Mounting Filesystems.AVI
+42 Swap Partitions.AVI
+43 Quota Management pt- 1.AVI
+44 Quota Management pt- 2.AVI
+45 Hard and Soft Links.AVI
+46 File and Folder ACL Management.AVI
+47 LVM Overview.AVI
+48 Creating a Logical Volume pt- 1.AVI
+49 Creating a Logical Volume pt- 2.AVI
+50 LVM Snapshots.AVI
+51 GUI LVM Management.AVI
+52 Service Commands.AVI
+53 Using system-config-services.AVI
+54 SELinux Overview.AVI
+55 SELinux Tools.AVI
+56 Setting SELinux Contexts pt- 1.AVI
+57 Setting SELinux Contexts pt- 2.AVI
+58 SELinux - mv Versus cp.AVI
+59 SELinux Booleans.AVI
+60 Encrypted Filesystems.AVI
+61 NFS.AVI
+62 FTP pt- 1.AVI
+63 FTP pt- 2.AVI
+64 CIFS (Samba) Client.AVI
+65 Autofs.AVI
+66 HTTP Server pt- 1.AVI
+67 HTTP Server pt- 2.AVI
+68 NTP Server.AVI
+69 Secure Shell (SSH) Commands.AVI
+70 VNC.AVI
+71 View Running Processes.AVI
+72 Changing Process Priorities.AVI
+73 Stopping Processes.AVI
+74 Scheduling a Job with cron.AVI
+75 Scheduling a Job with at.AVI
+76 System Logs Overview.AVI
+77 Reading Logfiles.AVI
+78 syslog.AVI
+79 Linux Kernel Overview.AVI
+80 Hardware and the Kernel.AVI
+81 Kernel Modules.AVI
+82 Working with proc and sysctl-conf.AVI
+83 The Boot Process.AVI
+84 GRUB.AVI
+85 Upstart.AVI
+86 Runlevels pt- 1.AVI
+87 Runlevels pt- 2.AVI
+88 Powering Down the System.AVI
+89 Basic Troubleshooting.AVI
+90 Network Troubleshooting.AVI
+91 The Rescue Environment.AVI
+92 User Account Troubleshooting.AVI
+93 Introduction to Virtualization.AVI
+94 virsh.AVI
+95 virt-manager pt- 1.AVI
+96 virt-manager pt- 2.AVI
+97 Course Wrap Up.AVI
+98 Getting Help.AVI
+99 About the Author.AVI
+
+
+
+

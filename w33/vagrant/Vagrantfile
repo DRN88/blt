@@ -1,0 +1,24 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.define "sandbox", primary: true do |sandbox|
+    sandbox.vm.box = "sandbox"
+    sandbox.vm.provision "shell" do |s|
+      s.path = "shellprovision.sh"
+      s.args   = "sandbox"
+    end
+    sandbox.vm.box_url = "http://cloud.centos.org/centos/7/vagrant/x86_64/images/CentOS-7-x86_64-Vagrant-1603_01.VirtualBox.box"
+    sandbox.vm.network "private_network", ip: "192.168.123.10", virtualbox__intnet: true, nic_type: "virtio"
+    # sandbox.vm.network "public_network", bridge: "Broadcom NetXtreme Gigabit Ethernet"
+    sandbox.vm.synced_folder '.', '/home/vagrant/sync', disabled: true
+    sandbox.vm.network "forwarded_port", guest: 22, host: 2001, host_ip: "0.0.0.0", guest_ip: "192.168.123.10"
+    sandbox.vm.provider "virtualbox" do |v|
+      v.customize ["modifyvm", :id, "--nictype1", "virtio"]
+      v.customize ["modifyvm", :id, "--nicpromisc2", "allow-all"]
+      v.memory = 1024
+      v.cpus = 2
+    end
+  end
+# End of Vagrantfile
+end
