@@ -6,8 +6,7 @@ https://guides.github.com/activities/forking/
 https://help.github.com/articles/fork-a-repo/  
 3. Do your homework in 'homeworks/w[0-9][0-9]/js' folder. Example:
 ```blt/homeworks/w39/js``` Where 'js' is "John Smith"
-```diff
-+ Copy the 'src' folder content to your directory! Do not edit 'src' folder content.
+Copy the 'src' folder content to your directory! Do not edit 'src' folder content.
 ```
 4. Explain your solution using Markdown syntax with README.md file:   https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 5. Once you are finished, create a pull request on Github
