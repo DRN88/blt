@@ -1,11 +1,9 @@
 ## Homework howto
 
 1. Register a Github account
-2. Fork DRN88/blt repository  
+2. Fork DRN88/blt repository on Github  
 https://guides.github.com/activities/forking/  
 https://help.github.com/articles/fork-a-repo/  
-Command:
-```git clone https://github.com/DRN88/blt.git```
 3. Do your homework in 'homeworks/w[0-9][0-9]/js' folder. Example:
 ```blt/homeworks/w39/js``` Where 'js' is "John Smith"
 ```diff
