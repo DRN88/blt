@@ -16,7 +16,7 @@ Command:
 ## Tips and useful commands
 #### git
 ```bash
-git config user.name "MyName"     # Commits will be displayed with this uploader name
+git config user.name "MyName"     # Commits will be displayed with this uploader name - https://help.github.com/articles/setting-your-username-in-git/
 git status                        # Check the changes between last commit vs newer changes
 git add .                         # adds files/folders to commit
 git commit -m "My Commit Message" # commits the files with that message
