@@ -73,4 +73,32 @@ An 'or' statement can be created by putting the options in brackets and separati
 
 ### 4. List all Doctors who works for Yotz or Devcast or Aimbu
 
+`egrep "^Dr," evilcorp_users1.csv | egrep ",(Yotz|Devcast|Aimbu)," `
+
+Using again what we learned in the previous two tasks
+
+### 5. List all Females who born in Q2 and Q4
+
+`egrep ",Female,[0-9]{2}/(0[4-6]|1[0-2])/[0-9]{4}," evilcorp_users1.csv`
+
+The different part here is the month field, 0[4-6] means we can have the fourth, fifth or sixth month. We then have a pipe '|' (or) we can have the tenth, eleventh or twelvth month as denoted by 1[0-2]. In both cases the first number is the first character and the part in brackets is the small range the second number is allowed to be.
+
+### 6. List all Doctors who are Males and every octet in their IP address has only one digit, ie: n.n.n.n
+
+This is a trick question! There are no users with IP addresses with only one digit in each octet! However, as an example, the following will show the same thing but for users with two digits in each octet:
+
+`egrep "^Dr," evilcorp_users1.csv | egrep ",Male," | egrep ",[1-9]{2}\.[0-9]{2}\.[0-9]{2}\.[0-9]{2}$"`
+
+### ### 7. List all the doctor males who has 7 or shorter local-part in their email address. (the field until the '@' sign) and their email ends with '.com'
+
+
+
+
+
+
+
+
+
+
+
 
