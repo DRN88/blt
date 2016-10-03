@@ -41,7 +41,7 @@ Same as the command before, except we show the first number in the list which wi
 
 `seq 100 | egrep "[1-9][13579]" | awk '{print "My odd number is " $1}'`
 
-First we generate the full list of numbers from 1 to 100 using 'sed 100'
+First we generate the full list of numbers from 1 to 100 using 'seq 100'
 
 Next we filter out all the even numbers using egrep where [1-9] is the first digit and [13579] is the second, all numbers ending in 1, 3, 5, 7, or 9 are odd.
 
@@ -105,7 +105,21 @@ Repeat of Task 2 #1? The answer is the same at least:
 
 ### 2. Count the cities. Print the results in the following format: <city> found <count> times. Sort by the count Ascending. Display only the first 20 results.
 
+`tail -n +2 evilcorp_users1.csv | awk -F "," '{ print $8 }' | sort | uniq -c | sort -n | awk '{print $2" ""found"" "$1" ""times""."}' | head -n 20`
 
+This one was fun... First we output the contents of the .csv cutting off the first row with the column descriptions in it: (tail -n +2 evilcorp_users1.csv)
+
+Next we use awk to list out everything in the eighth column (city): (awk -F "," '{ print $8 }')
+
+Now we sort everything alphabetically, it will group all the cities together (sort)
+
+We use uniq -c to count all the cities, the format will have the number of times that value occurs, followed by a space, then the city name.
+
+We now sort again using the -n flag to sort by the numeric values we gained with uniq. The default sort is ascending. We need this for the final step.
+
+Using awk, we print the data as per the task requirements, uniq put the values in the wrong order so we print the 2nd ($2) followed by the 1st ($1).
+
+Finally we print the first 20 results, they're in ascending order thanks to the previous 'sort -n'
 
 
 
