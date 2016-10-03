@@ -10,10 +10,8 @@
 
 ### 2. Print the sum of all values
 
-`SUM="$(grep -o '[[:digit:]]' matrix.txt | awk '{ sum += $1 } END { print sum }')"`
-
-`echo "The sum of the matrix values are: ${SUM}"`
-
+```SUM="$(grep -o '[[:digit:]]' matrix.txt | awk '{ sum += $1 } END { print sum }')"
+echo "The sum of the matrix values are: ${SUM}"```
 
 First we need to get the numbers out of matrix.txt in a list format, 'grep -o' matches only what we specify, nothing else. '[[:digit:]]' matches only numbers. The two combined spit out a list of all the numbers without the semicolon.
 
@@ -21,17 +19,15 @@ We now pipe the output of this command into awk. 'sum' is a variable that we hav
 
 ### 3. Print the maximum value
 
-`MAX="$(grep -o '[[:digit:]]' matrix.txt | sort | tail -n 1)"`
-
-`echo "The maximum value is: ${MAX}"`
+```MAX="$(grep -o '[[:digit:]]' matrix.txt | sort | tail -n 1)"
+echo "The maximum value is: ${MAX}"```
 
 We get the list of numbers like we did before but then sort them into ascending order, then show the last number in the list which will always be the largest.
 
 ### 4. Print the minimum value
 
-`MIN="$(grep -o '[[:digit:]]' matrix.txt | sort | head -n 1)"`
-
-`echo "The minimum value is: ${MIN}"`
+```MIN="$(grep -o '[[:digit:]]' matrix.txt | sort | head -n 1)"
+echo "The minimum value is: ${MIN}"```
 
 Same as the command before, except we show the first number in the list which will always be the smallest.
 
