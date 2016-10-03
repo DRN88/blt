@@ -162,8 +162,57 @@ When specifying 'd' after the string, all matching lines are deleted.
 ### 5. Female 'Research Nurse'-ses got a promotion. They are now 'Senior Research Nurse'
 
 ```
+sed -r -i -e 's/,Research Nurse,/,Senior Research Nurse,/' evilcorp_users1.csv
+```
+
+Same process as 3.
+
+### 6. Women lie about their age. Set all females birth date to 01/01/1988 who is older than 1988.
 
 ```
+sed -r -i -e 's/,[0-9]{2}\/[0-9]{2}\/(196[0-9]|197[0-9]|198[0-7]),/,01\/01\/1988,/' evilcorp_users1.csv 
+```
+
+There might be a neater way of denoting all dates before 1988, as it is I have matched all dates in the 1960's and 1970's and all dates from 1980 to 1987 in the first part of the sed command. The second half simply replaces everything matched in the date field with 01/01/1988. Beware matching fields containing forward slashes using sed! You need to prepend each one with a backslash.
+
+### 7. Remove all 'Graphic Designer'-s ip address
+
+```
+sed -r -i -e '/,Graphic Designer,/ s/,[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$//' evilcorp_users1.csv
+```
+
+This one is a bit different, first we match what targets to modify but we then modify a completely different field. Note, we pick out 'Graphic Designer' before running the s/ part of sed. And opposed to replacing what we match (the IP address), because there is nothing between the last two forward slashes, nothing is what replaces the IP address.
+
+### 8. There has been an error with our data. Rename all 'David'-s to 'Danielle' who are female
+
+```
+sed -r -i -e '/,Female,/ s/,David/,Danielle/' evilcorp_users1.csv
+```
+
+Just like the previous task. Filter, find and replace all using sed.
+
+### 9. Restructure our CSV to the following: firstname,lastname,city,gender
+
+At first I thought this would be an easy awk job:
+
+```
+awk -F "," '{print $2","$3","$8","$4}' evilcorp_users1.csv
+```
+
+But to actually restructure the file in place needs a little more sed foo:
+
+```
+
+```
+
+
+
+
+
+
+
+
+
 
 
 
