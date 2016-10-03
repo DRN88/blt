@@ -127,7 +127,7 @@ Finally we print the first 20 results, they're already in ascending order thanks
 
 `sed -r -i -e 's/,Gosport,/,Gigazoom,/' evilcorp_users1.csv`
 
--r is for regex, -i is to edit the file in place, -e is the command we want to run, s/<what we we to replace>/<what we're replacing it with>/
+-r is for regex, -i is to edit the file in place, -e is the command we want to run, s/what we we to replace/what we're replacing it with/
 
 ### 4. All 'Sales Associate'-s been sacked. Please delete them.
 
