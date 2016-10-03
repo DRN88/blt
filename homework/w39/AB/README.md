@@ -193,26 +193,17 @@ Just like the previous task. Filter, find and replace all using sed.
 
 ### 9. Restructure our CSV to the following: firstname,lastname,city,gender
 
-At first I thought this would be an easy awk job:
+awk can output the contents of the csv file as required but cannot overwrite the contents:
 
 ```
 awk -F "," '{print $2","$3","$8","$4}' evilcorp_users1.csv
 ```
 
-But to actually restructure the file in place needs a little more sed foo:
+I'm sure there must be a way to achieve this using sed but I haven't got a clue how to do it. So, enjoy my amazing ghetto workaround!
 
 ```
-
+awk -F "," '{print $2","$3","$8","$4}' evilcorp_users1.csv > evilcorp_users1_temp && rm evilcorp_users1.csv && mv evilcorp_users1_temp evilcorp_users1.csv
 ```
 
 
-
-
-
-
-
-
-
-
-
-
+~FIN
