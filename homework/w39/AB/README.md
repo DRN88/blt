@@ -89,12 +89,21 @@ This is a trick question! There are no users with IP addresses with only one dig
 
 `egrep "^Dr," evilcorp_users1.csv | egrep ",Male," | egrep ",[1-9]{2}\.[0-9]{2}\.[0-9]{2}\.[0-9]{2}$"`
 
-### ### 7. List all the doctor males who has 7 or shorter local-part in their email address. (the field until the '@' sign) and their email ends with '.com'
+### 7. List all the doctor males who has 7 or shorter local-part in their email address. (the field until the '@' sign) and their email ends with '.com'
 
+`egrep "^Dr," evilcorp_users1.csv | egrep ",Male," | egrep ",[[:alpha:]]{0,7}@[[:alpha:]]*.com"`
 
+To break down the egrep command for the email address: [[:alpha:]]{0,7}@ refers to there being between zero and seven alphanumeric characters before the @ sign. [[:alpha:]]*.com refers to there being any amount of alphanumeric characters after the @ sign as long as they are appended with a .com.
 
+## Task 3
 
+### 1. Download evilcorp_users1.csv using wget or curl.
 
+Repeat of Task 2 #1? The answer is the same at least:
+
+`wget -N https://raw.githubusercontent.com/DRN88/blt/master/w37/evilcorp_users1.csv`
+
+### 2. Count the cities. Print the results in the following format: <city> found <count> times. Sort by the count Ascending. Display only the first 20 results.
 
 
 
