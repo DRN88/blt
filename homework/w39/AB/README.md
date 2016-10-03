@@ -105,7 +105,9 @@ Repeat of Task 2 #1? The answer is the same at least:
 
 ### 2. Count the cities. Print the results in the following format: <city> found <count> times. Sort by the count Ascending. Display only the first 20 results.
 
-`tail -n +2 evilcorp_users1.csv | awk -F "," '{ print $8 }' | sort | uniq -c | sort -n | awk '{print $2" ""found"" "$1" ""times""."}' | head -n 20`
+```
+tail -n +2 evilcorp_users1.csv | awk -F "," '{ print $8 }' | sort | uniq -c | sort -n | awk '{print $2" ""found"" "$1" ""times""."}' | head -n 20
+```
 
 This one was fun... First we output the contents of the .csv cutting off the first row with the column descriptions in it: (tail -n +2 evilcorp_users1.csv)
 
@@ -119,7 +121,23 @@ We now sort again using the -n flag to sort by the numeric values we gained with
 
 Using awk, we print the data as per the task requirements, uniq put the values in the wrong order so we print the 2nd ($2) followed by the 1st ($1).
 
-Finally we print the first 20 results, they're in ascending order thanks to the previous 'sort -n'
+Finally we print the first 20 results, they're already in ascending order thanks to the previous 'sort -n'
+
+### 3. A company called 'Gosport' has been sold to 'Gigazoom'. Please update their company name
+
+`sed -r -i -e 's/,Gosport,/,Gigazoom,/' evilcorp_users1.csv`
+
+-r is for regex, -i is to edit the file in place, -e is the command we want to run, s/<what we we to replace>/<what we're replacing it with>/
+
+### 4. All 'Sales Associate'-s been sacked. Please delete them.
+
+`sed -r -i -e '/Sales Associate,/ d' evilcorp_users1.csv`
+
+When specifying 'd' after the string, all matching lines are deleted.
+
+### 5. Female 'Research Nurse'-ses got a promotion. They are now 'Senior Research Nurse'
+
+
 
 
 
