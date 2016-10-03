@@ -4,7 +4,9 @@
 
 ### 1. Create a symbolic link to matrix.txt. Call the symbolic link as supermatrix.txt
 
-`ln -s matrix.txt supermatrix.txt`
+```
+ln -s matrix.txt supermatrix.txt
+```
 
 'ln -s' is the command to create a soft-link, followed by the source (real) file and the destination (symlink)
 
@@ -39,7 +41,9 @@ Same as the command before, except we show the first number in the list which wi
 
 ### 5. Use seq to print all odd numbers from 1 to 100
 
-`seq 100 | egrep "[1-9][13579]" | awk '{print "My odd number is " $1}'`
+```
+seq 100 | egrep "[1-9][13579]" | awk '{print "My odd number is " $1}'
+```
 
 First we generate the full list of numbers from 1 to 100 using 'seq 100'
 
@@ -51,13 +55,17 @@ Finally we prepend "My odd number is" to the beginning of every line using awk.
 
 ### 1. Download evilcorp_users1.csv using wget or curl.
 
-`wget -N https://raw.githubusercontent.com/DRN88/blt/master/w37/evilcorp_users1.csv`
+```
+wget -N https://raw.githubusercontent.com/DRN88/blt/master/w37/evilcorp_users1.csv
+```
 
 Using wget with the '-N' flag will not re-retrieve files unless they are newer than the local one, thereby ensuring there is only ever one instance of the .csv
 
 ### 2. List all Males where their firstname starts with 'C'
 
-`egrep ",Male," evilcorp_users1.csv | egrep "^[[:alnum:]]*,C[[:alpha:]]*,"`
+```
+egrep ",Male," evilcorp_users1.csv | egrep "^[[:alnum:]]*,C[[:alpha:]]*,"
+```
 
 First we use egrep to find all the Males, then pipe the output to egrep again to find the first names starting with 'C'.
 
@@ -65,7 +73,9 @@ First we use egrep to find all the Males, then pipe the output to egrep again to
 
 ### 3. List all Females from London or Peterborough who born between 1980-1989
 
-`egrep ",Female,[0-9]{2}/[0-9]{2}/198[0-9]," evilcorp_users1.csv | egrep ",(London|Peterborough),"`
+```
+egrep ",Female,[0-9]{2}/[0-9]{2}/198[0-9]," evilcorp_users1.csv | egrep ",(London|Peterborough),"
+```
 
 The date of birth field is right next to the gender field. If a date format is dd/mm/yyyy use egrep to show any two ({2}) numbers for dd or mm, then any year beginning with 198.
 
@@ -73,13 +83,17 @@ An 'or' statement can be created by putting the options in brackets and separati
 
 ### 4. List all Doctors who works for Yotz or Devcast or Aimbu
 
-`egrep "^Dr," evilcorp_users1.csv | egrep ",(Yotz|Devcast|Aimbu)," `
+```
+egrep "^Dr," evilcorp_users1.csv | egrep ",(Yotz|Devcast|Aimbu),"
+```
 
 Using again what we learned in the previous two tasks
 
 ### 5. List all Females who born in Q2 and Q4
 
-`egrep ",Female,[0-9]{2}/(0[4-6]|1[0-2])/[0-9]{4}," evilcorp_users1.csv`
+```
+egrep ",Female,[0-9]{2}/(0[4-6]|1[0-2])/[0-9]{4}," evilcorp_users1.csv
+```
 
 The different part here is the month field, 0[4-6] means we can have the fourth, fifth or sixth month. We then have a pipe '|' (or) we can have the tenth, eleventh or twelvth month as denoted by 1[0-2]. In both cases the first number is the first character and the part in brackets is the small range the second number is allowed to be.
 
@@ -87,11 +101,15 @@ The different part here is the month field, 0[4-6] means we can have the fourth,
 
 This is a trick question! There are no users with IP addresses with only one digit in each octet! However, as an example, the following will show the same thing but for users with two digits in each octet:
 
-`egrep "^Dr," evilcorp_users1.csv | egrep ",Male," | egrep ",[1-9]{2}\.[0-9]{2}\.[0-9]{2}\.[0-9]{2}$"`
+```
+egrep "^Dr," evilcorp_users1.csv | egrep ",Male," | egrep ",[1-9]{2}\.[0-9]{2}\.[0-9]{2}\.[0-9]{2}$"
+```
 
 ### 7. List all the doctor males who has 7 or shorter local-part in their email address. (the field until the '@' sign) and their email ends with '.com'
 
-`egrep "^Dr," evilcorp_users1.csv | egrep ",Male," | egrep ",[[:alpha:]]{0,7}@[[:alpha:]]*.com"`
+```
+egrep "^Dr," evilcorp_users1.csv | egrep ",Male," | egrep ",[[:alpha:]]{0,7}@[[:alpha:]]*.com"
+```
 
 To break down the egrep command for the email address: [[:alpha:]]{0,7}@ refers to there being between zero and seven alphanumeric characters before the @ sign. [[:alpha:]]*.com refers to there being any amount of alphanumeric characters after the @ sign as long as they are appended with a .com.
 
@@ -101,7 +119,9 @@ To break down the egrep command for the email address: [[:alpha:]]{0,7}@ refers 
 
 Repeat of Task 2 #1? The answer is the same at least:
 
-`wget -N https://raw.githubusercontent.com/DRN88/blt/master/w37/evilcorp_users1.csv`
+```
+wget -N https://raw.githubusercontent.com/DRN88/blt/master/w37/evilcorp_users1.csv
+```
 
 ### 2. Count the cities. Print the results in the following format: <city> found <count> times. Sort by the count Ascending. Display only the first 20 results.
 
@@ -125,21 +145,25 @@ Finally we print the first 20 results, they're already in ascending order thanks
 
 ### 3. A company called 'Gosport' has been sold to 'Gigazoom'. Please update their company name
 
-`sed -r -i -e 's/,Gosport,/,Gigazoom,/' evilcorp_users1.csv`
+```
+sed -r -i -e 's/,Gosport,/,Gigazoom,/' evilcorp_users1.csv
+```
 
 -r is for regex, -i is to edit the file in place, -e is the command we want to run, s/what we we to replace/what we're replacing it with/
 
 ### 4. All 'Sales Associate'-s been sacked. Please delete them.
 
-`sed -r -i -e '/Sales Associate,/ d' evilcorp_users1.csv`
+```
+sed -r -i -e '/Sales Associate,/ d' evilcorp_users1.csv
+```
 
 When specifying 'd' after the string, all matching lines are deleted.
 
 ### 5. Female 'Research Nurse'-ses got a promotion. They are now 'Senior Research Nurse'
 
+```
 
-
-
+```
 
 
 
