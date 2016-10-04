@@ -10,8 +10,7 @@ wget -N https://raw.githubusercontent.com/DRN88/blt/master/w37/evilcorp_users1.c
 ### 2. Count the cities. Print the results in the following format:
 ### <city> found <count> times. Sort by the count Ascending. Display only the
 ### first 20 results.
-tail -n +2 evilcorp_users1.csv | awk -F "," '{ print $8 }' | sort | uniq -c | sort -n | awk '{print $2" ""found"" "$1" ""times""."}' | head -n 20
-
+tail -n +2 evilcorp_users1.csv | awk -F "," '{ print $8 }' | sort | uniq -c | sort -n | awk '{print $2" found "$1" times."}' | head -n 2
 
 ### 3. A company called 'Gosport' has been sold to 'Gigazoom'. Please update
 ### their company name

@@ -42,14 +42,10 @@ Same as the command before, except we show the first number in the list which wi
 ### 5. Use seq to print all odd numbers from 1 to 100
 
 ```
-seq 100 | egrep "[1-9][13579]" | awk '{print "My odd number is " $1}'
+seq 1 2 99
 ```
 
-First we generate the full list of numbers from 1 to 100 using 'seq 100'
-
-Next we filter out all the even numbers using egrep where [1-9] is the first digit and [13579] is the second, all numbers ending in 1, 3, 5, 7, or 9 are odd.
-
-Finally we prepend "My odd number is" to the beginning of every line using awk.
+From 'man seq' *seq [OPTION]... FIRST INCREMENT LAST* So we start at '1', increment by '2' to skip all even numbers, and finish at '99' which is the last odd number in the range.
 
 ## Task 2
 
@@ -126,7 +122,7 @@ wget -N https://raw.githubusercontent.com/DRN88/blt/master/w37/evilcorp_users1.c
 ### 2. Count the cities. Print the results in the following format: <city> found <count> times. Sort by the count Ascending. Display only the first 20 results.
 
 ```
-tail -n +2 evilcorp_users1.csv | awk -F "," '{ print $8 }' | sort | uniq -c | sort -n | awk '{print $2" ""found"" "$1" ""times""."}' | head -n 20
+tail -n +2 evilcorp_users1.csv | awk -F "," '{ print $8 }' | sort | uniq -c | sort -n | awk '{print $2" found "$1" times."}' | head -n 2
 ```
 
 This one was fun... First we output the contents of the .csv cutting off the first row with the column descriptions in it: (tail -n +2 evilcorp_users1.csv)
