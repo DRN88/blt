@@ -42,7 +42,7 @@ Same as the command before, except we show the first number in the list which wi
 ### 5. Use seq to print all odd numbers from 1 to 100
 
 ```
-seq 1 2 99
+seq -f "My odd number is %g" 1 2 99 
 ```
 
 From 'man seq' *seq [OPTION]... FIRST INCREMENT LAST* So we start at '1', increment by '2' to skip all even numbers, and finish at '99' which is the last odd number in the range.

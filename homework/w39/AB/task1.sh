@@ -31,4 +31,4 @@ echo "The minimum value is: ${MIN}"
 # Output should be in this format: "My odd number is ${NUMBER}"
 # Use for, seq, echo and a NUMBER variable
 # BONUS: Use only seq (no for, etc)
-seq 1 2 99
+seq -f "My odd number is %g" 1 2 99 
